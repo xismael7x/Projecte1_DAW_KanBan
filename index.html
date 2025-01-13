@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanBan</title>
+    <link rel="stylesheet" src="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" crossorigin="anonymous">
+
+<style>
+    body {
+        padding-top: 120px; /* Para evitar que el contenido quede debajo del header fijo */
+        margin-bottom: 100px;
+        background-color: #453f3c;
+    }
+    
+    header, footer {
+        background-color: #83B5D1;
+    }
+    
+    header h1, p {
+        color: black;
+    }
+    
+    footer div{
+        color: black;
+    }
+    
+    .card, .btn {
+        background-color: #c7f0bd;
+        color: black;
+    }
+    
+    .card {
+        margin: 10px;
+    }
+    
+    .btn {
+        margin-bottom: 5px;
+    }
+    
+    .todo-column, .doing-column, .done-column  {
+        background-color: #a28b8b;
+    }
+</style>
+
+</head>
+<body>
+    <!-- Capçalera de la pàgina web -->
+    <header class="text-white text-center py-3 fixed-top">
+        <h1>KanBan</h1>
+        <p>To-Do | Doing | Done</p>
+    </header>
+
+    <!-- Cos de la pàgina KanBan (aquest es l'apartat dels botons) -->
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block">CARREGAR TASQUES</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-success btn-block">AFEGIR UNA TASCA</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-danger btn-block">NETEJAR-HO TOT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cos principal i funcional de la pàgina web (aqui anirán kes tasques) -->
+    <div class="container mt-4">
+        <div class="row text-center">
+            <!-- Columna To-Do -->
+            <div class="col-md-4 todo-column" ondrop="drop(event)" ondragover="dragOver(event)">
+            </div>
+            <!-- Columna Doing -->
+            <div class="col-md-4 doing-column" ondrop="drop(event)" ondragover="dragOver(event)">
+                <div class="task-container"></div>
+            </div>
+            <!-- Columna Done -->
+            <div class="col-md-4 done-column" ondrop="drop(event)" ondragover="dragOver(event)">
+                <div class="task-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer amb els drets de la pàgina, i el botó de personalització -->
+    <footer class="text-white py-3 fixed-bottom">
+        <div class="container d-flex justify-content-between">
+            <div>
+                &copy; Ismael Iván A. B.
+            </div>
+            <div>
+                <button class="btn btn-light">PERSONALITZAR</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/myscript.js"></script>
+</body>
+</html>
