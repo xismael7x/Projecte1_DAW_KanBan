@@ -1,0 +1,34 @@
+body {
+    padding-top: 120px;
+    margin-bottom: 100px;
+    background-color: #453f3c;
+}
+
+header, footer {
+    background-color: #83B5D1;
+}
+
+header h1, p {
+    color: black;
+}
+
+footer div{
+    color: black;
+}
+
+.card, .btn {
+    background-color: #c7f0bd;
+    color: black;
+}
+
+.card {
+    margin: 10px;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+.todo-column, .doing-column, .done-column  {
+    background-color: #a28b8b;
+}
