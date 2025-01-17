@@ -11,6 +11,7 @@
         // Fem un event per afegir la tasca
         bAfegirTasca.addEventListener('click', function() {
             // Demanem l'informació general de la tasca
+            alert("Tots els camps son obligatoris.")
             const titol = prompt('Títol de la tasca:');
             const dataFi = prompt('Data de finalització (DD/MM/AAAA):');
 
